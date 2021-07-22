@@ -12,34 +12,25 @@ class Navbar extends Component {
   render() {
     const isActive = this.state.isActive;
     return (
-      <header className="navbar-container">
-        <div className="navbar">
+      <header className="na-co">
+        <div className="na">
           <Logo />
-          <div className="navlink-parent">
-            <div
-              className={
-                isActive ? "navlink-container nav-clicked" : "navlink-container"
-              }
-            >
-              <NavLink className="navlink" to="/how-we-work">
-                HOW WE WORK
-              </NavLink>
-              <NavLink className="navlink" to="/blog">
-                BLOG
-              </NavLink>
-              <NavLink className="navlink" to="/account">
-                ACCOUNT
-              </NavLink>
-              <button className="navbar-btn">VIEW PLANS</button>
-            </div>
+          <div className="bu-me">
+            <div className="line"></div>
+            <div className="line"></div>
+            <div className="line"></div>
           </div>
-          <div
-            className={isActive ? "ham-menu clicked" : "ham-menu"}
-            onClick={this.handleToggle}
-          >
-            <div className="line"></div>
-            <div className="line"></div>
-            <div className="line"></div>
+          <div className="na-li-co">
+            <NavLink className="li" to="/how-we-work">
+              HOW WE WORK
+            </NavLink>
+            <NavLink className="li" to="/blog">
+              BLOG
+            </NavLink>
+            <NavLink className="li" to="/account">
+              ACCOUNT
+            </NavLink>
+            <button className="na-btn">VIEW MORE</button>
           </div>
         </div>
       </header>
