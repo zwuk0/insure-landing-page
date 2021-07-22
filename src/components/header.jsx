@@ -1,17 +1,46 @@
 import "../scss/app.scss";
+import "./svg/index";
 import React, { Component } from "react";
 import { NavLink } from "react-router-dom";
+import { Logo } from "./svg/index";
 
 class Navbar extends Component {
+  state = { isActive: false };
+  handleToggle = () => {
+    this.setState({ isActive: !this.state.isActive });
+  };
   render() {
+    const isActive = this.state.isActive;
     return (
-      <header className="h-nav">
-        <HamMenu />
+      <header className="navbar-container">
         <div className="navbar">
-          <NavLink to="/how-we-work">How We Work</NavLink>
-          <NavLink to="/blog">Blog</NavLink>
-          <NavLink to="/account">Account</NavLink>
-          <button className="navbar-btn">View Plans</button>
+          <Logo />
+          <div className="navlink-parent">
+            <div
+              className={
+                isActive ? "navlink-container nav-clicked" : "navlink-container"
+              }
+            >
+              <NavLink className="navlink" to="/how-we-work">
+                HOW WE WORK
+              </NavLink>
+              <NavLink className="navlink" to="/blog">
+                BLOG
+              </NavLink>
+              <NavLink className="navlink" to="/account">
+                ACCOUNT
+              </NavLink>
+              <button className="navbar-btn">VIEW PLANS</button>
+            </div>
+          </div>
+          <div
+            className={isActive ? "ham-menu clicked" : "ham-menu"}
+            onClick={this.handleToggle}
+          >
+            <div className="line"></div>
+            <div className="line"></div>
+            <div className="line"></div>
+          </div>
         </div>
       </header>
     );
@@ -19,12 +48,3 @@ class Navbar extends Component {
 }
 
 export default Navbar;
-function HamMenu() {
-  return (
-    <div className="hammenu">
-      <div>1</div>
-      <div>2</div>
-      <div>3</div>
-    </div>
-  );
-}

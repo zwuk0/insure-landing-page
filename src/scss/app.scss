@@ -1,5 +1,5 @@
-@use 'variables';
-@use 'global';
-@use 'header';
-@use 'hero';
-@use 'footer';
+@use 'partials/variables';
+@use 'partials/global';
+@use 'components/header';
+@use 'components/hero';
+@use 'components/footer';
