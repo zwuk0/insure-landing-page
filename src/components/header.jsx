@@ -14,24 +14,27 @@ class Navbar extends Component {
     return (
       <header className="na-co">
         <div className="na">
-          <Logo />
-          <div className="bu-me">
+          <Logo className="logo" />
+          <div
+            className={isActive ? "bu-me bu-clicked" : "bu-me"}
+            onClick={this.handleToggle}
+          >
             <div className="line"></div>
             <div className="line"></div>
             <div className="line"></div>
           </div>
-          <div className="na-li-co">
-            <NavLink className="li" to="/how-we-work">
-              HOW WE WORK
-            </NavLink>
-            <NavLink className="li" to="/blog">
-              BLOG
-            </NavLink>
-            <NavLink className="li" to="/account">
-              ACCOUNT
-            </NavLink>
-            <button className="na-btn">VIEW MORE</button>
-          </div>
+        </div>
+        <div className={isActive ? "na-clicked" : "na-li-co"}>
+          <NavLink className="li" to="/how-we-work">
+            HOW WE WORK
+          </NavLink>
+          <NavLink className="li" to="/blog">
+            BLOG
+          </NavLink>
+          <NavLink className="li" to="/account">
+            ACCOUNT
+          </NavLink>
+          <button className="na-btn">VIEW MORE</button>
         </div>
       </header>
     );
