@@ -8,6 +8,9 @@
 }
 .row1-img {
   width: 100%;
+  display: grid;
+  place-items: center;
+
   img {
     width: 100%;
     height: 100%;
@@ -22,6 +25,10 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  // background-color: rgba(0, 0, 0, 0.219);
+  hr {
+    display: none;
+  }
   h1 {
     font-family: v.$dm;
     font-size: 3.5rem;
@@ -51,9 +58,10 @@
     top: 0;
     left: 0;
     display: block;
-    width: 50%;
-    height: 50%;
+    width: 45%;
+    height: 45%;
     background: url(../../assets/bg-pattern-intro-left-mobile.svg) no-repeat;
+    background-size: contain;
   }
   &::after {
     content: "";
@@ -61,55 +69,179 @@
     bottom: -28%;
     right: 0;
     display: block;
-    width: 50%;
-    height: 50%;
+    width: 60%;
+    height: 60%;
     background: url(../../assets/bg-pattern-intro-right-mobile.svg) no-repeat;
     background-size: contain;
     background-position: bottom right;
   }
 }
-@media only screen and (min-width: 50em) {
+
+.details__container {
+  display: grid;
+  margin-top: 6em;
+  place-items: center;
+}
+.details {
+  max-width: 90em;
+  margin-left: 5%;
+  margin-right: 5%;
+  text-align: center;
+  display: grid;
+  place-items: center;
+
+  hr {
+    display: block;
+    width: 8em;
+    color: v.$veryLightGray;
+    margin-bottom: 3em;
+  }
+  h1 {
+    font-family: v.$dm;
+    font-size: 4em;
+    color: v.$veryDarkViolet;
+  }
+}
+.details__box {
+  display: grid;
+  place-items: center;
+  max-width: 20em;
+  height: 15em;
+  margin: 3em 0 2em 0;
+  h3 {
+    margin-top: 1em;
+    font-family: v.$dm;
+    color: v.$veryDarkViolet;
+  }
+  p {
+    margin-top: 1em;
+    color: v.$grayBlue;
+  }
+}
+.cta_con {
+  width: 100%;
+  display: grid;
+  place-items: center;
+}
+.cta_box {
+  background-color: v.$darkViolet;
+  width: 100%;
+  height: 100%;
+  font-family: v.$dm;
+  color: v.$veryLightGray;
+  font-size: 2em;
+  text-align: center;
+  display: grid;
+  place-items: center;
+  max-width: 90em;
+  background: url(../../assets/bg-pattern-how-we-work-mobile.svg), v.$darkViolet;
+  background-repeat: no-repeat;
+  background-position: right top;
+  padding-top: 2em;
+  padding-bottom: 2em;
+  h2 {
+    width: 80%;
+    max-width: 8em;
+  }
+
+  .cta_btn {
+    width: 12em;
+    height: 3em;
+    color: v.$veryLightGray;
+    border: 1px solid v.$veryLightGray;
+    background-color: transparent;
+    font-weight: 700;
+  }
+}
+@media only screen and (min-width: 48em) {
+  .row1 {
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 60%;
+      left: 0;
+      display: block;
+      width: 80%;
+      height: 80%;
+      background: url(../../assets/bg-pattern-intro-left-desktop.svg) no-repeat;
+      background-size: contain;
+      background-position: bottom left;
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      // bottom: -28%;
+      right: 0;
+      display: block;
+      width: 80%;
+      height: 80%;
+      background: url(../../assets//bg-pattern-intro-right-desktop.svg)
+        no-repeat;
+      background-size: contain;
+      background-position: top right;
+    }
+  }
   .ro1-it-wrap {
     display: flex;
-    flex-direction: row-reverse;
+    flex-direction: row;
     align-items: center;
-    background-color: v.$darkViolet;
-    color: v.$veryLightGray;
+    height: 45em;
+    width: 100%;
+    max-width: 90em;
+    position: relative;
   }
   .row1-img {
-    width: auto;
-    padding-right: 10%;
-    width: 100%;
-    max-width: 40em;
-
+    // width: 100%;
+    width: 50%;
+    display: flex;
+    position: absolute;
+    align-items: center;
+    justify-content: right;
+    margin-top: 2em;
+    top: 20%;
+    right: 0;
+    margin-right: 5%;
     img {
-      width: 100%;
-      height: 100%;
+      min-width: 30em;
+      max-width: 35em;
     }
   }
   .row1-text {
+    margin-left: 5%;
+
     text-align: left;
-    height: 40em;
-    width: 100%;
+    height: auto;
+    width: 50%;
     padding-top: 8em;
-    padding-left: 10%;
-    position: relative;
+    position: static;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    padding-bottom: 3em;
+    // background-color: rgba(0, 0, 0, 0.219);
+    hr {
+      display: block;
+      width: 8em;
+      color: v.$veryLightGray;
+      margin-bottom: 3em;
+    }
     h1 {
       font-family: v.$dm;
-      font-size: 3.5rem;
-      width: 85%;
+      font-size: 4rem;
+      width: 70%;
       z-index: 2;
     }
     p {
       margin-top: 1em;
-      font-size: 1rem;
+      font-size: 1.25rem;
       line-height: 1.5;
-      width: 80%;
+      width: 100%;
+      z-index: 2;
     }
     .row1-btn {
+      z-index: 2;
+
       width: 12em;
       height: 3.375em;
       max-width: 20em;
@@ -125,6 +257,67 @@
     }
     &::after {
       display: none;
+    }
+  }
+  .details {
+    display: block;
+    margin-top: 10em;
+    text-align: left;
+    width: 100%;
+    max-width: 90em;
+    padding-left: 5%;
+    margin-right: 5%;
+  }
+  .dbox__con {
+    display: flex;
+    text-align: left;
+    margin-top: 3em;
+  }
+  .details__box {
+    display: block;
+    text-align: left;
+    width: 100%;
+    max-width: 22em;
+    &:not(:last-child) {
+      margin-right: 5em;
+    }
+  }
+  .cta_con {
+    width: 100%;
+    display: grid;
+    place-items: center;
+    margin-top: 5em;
+  }
+  .cta_box {
+    width: 100%;
+    height: 100%;
+    font-family: v.$dm;
+    color: v.$veryLightGray;
+    font-size: 2em;
+    text-align: left;
+    max-width: 40em;
+    display: flex;
+    padding-top: 1.5em;
+    padding-bottom: 1.5em;
+    align-items: center;
+    justify-content: space-around;
+    background: url(../../assets/bg-pattern-how-we-work-desktop.svg),
+      v.$darkViolet;
+    background-repeat: no-repeat;
+    background-position: right;
+    h2 {
+      width: 80%;
+      max-width: 9em;
+      font-size: 3.5rem;
+    }
+
+    .cta_btn {
+      width: 12em;
+      height: 3em;
+      color: v.$veryLightGray;
+      border: 1px solid v.$veryLightGray;
+      background-color: transparent;
+      font-weight: 700;
     }
   }
 }
