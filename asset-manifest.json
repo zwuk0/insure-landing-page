@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/insure-landing-page/static/css/main.39d8fbbb.chunk.css",
+    "main.js": "/insure-landing-page/static/js/main.ec4f2bb1.chunk.js",
+    "main.js.map": "/insure-landing-page/static/js/main.ec4f2bb1.chunk.js.map",
+    "runtime-main.js": "/insure-landing-page/static/js/runtime-main.45f826f6.js",
+    "runtime-main.js.map": "/insure-landing-page/static/js/runtime-main.45f826f6.js.map",
+    "static/js/2.fdcf8d70.chunk.js": "/insure-landing-page/static/js/2.fdcf8d70.chunk.js",
+    "static/js/2.fdcf8d70.chunk.js.map": "/insure-landing-page/static/js/2.fdcf8d70.chunk.js.map",
+    "static/js/3.6759d739.chunk.js": "/insure-landing-page/static/js/3.6759d739.chunk.js",
+    "static/js/3.6759d739.chunk.js.map": "/insure-landing-page/static/js/3.6759d739.chunk.js.map",
+    "index.html": "/insure-landing-page/index.html",
+    "static/css/main.39d8fbbb.chunk.css.map": "/insure-landing-page/static/css/main.39d8fbbb.chunk.css.map",
+    "static/js/2.fdcf8d70.chunk.js.LICENSE.txt": "/insure-landing-page/static/js/2.fdcf8d70.chunk.js.LICENSE.txt",
+    "static/media/app.scss": "/insure-landing-page/static/media/bg-pattern-mobile-nav.b2fceba3.svg",
+    "static/media/image-intro-desktop.2f3429f6.jpg": "/insure-landing-page/static/media/image-intro-desktop.2f3429f6.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.45f826f6.js",
+    "static/js/2.fdcf8d70.chunk.js",
+    "static/css/main.39d8fbbb.chunk.css",
+    "static/js/main.ec4f2bb1.chunk.js"
+  ]
+}
