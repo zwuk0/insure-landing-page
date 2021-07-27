@@ -1,7 +1,6 @@
 @use '../partials/variables' as v;
 
 header {
-  overflow-x: hidden;
   display: flex;
   // position: relative;
   z-index: 10;
@@ -113,7 +112,9 @@ header {
 
 @media only screen and (min-width: 48em) {
   header {
-    justify-content: center;
+    justify-content: space-evenly;
+    width: 100%;
+    overflow-x: hidden;
   }
   .nav-container {
     width: 100%;
@@ -124,12 +125,12 @@ header {
     max-width: 90em;
   }
   .na {
-    margin-left: 5%;
+    margin-left: 0;
     padding-left: 0;
   }
   .na-li-co {
-    justify-content: right;
-    margin-right: 5%;
+    justify-content: flex-end;
+    margin-right: 0;
     position: relative;
     display: flex;
     flex-direction: row;
@@ -157,6 +158,10 @@ header {
       font-weight: 400;
       color: v.$veryDarkViolet;
       border: 2px solid v.$veryDarkViolet;
+    }
+    .na-btn:hover {
+      background-color: v.$veryDarkViolet;
+      color: v.$veryLightGray;
     }
   }
   .bu-me {

@@ -3,6 +3,7 @@ import introImg from "../assets/image-intro-desktop.jpg";
 import SvgIconAffordablePrices from "./svg/IconAffordablePrices";
 import SvgIconPeopleFirst from "./svg/IconPeopleFirst";
 import SvgIconSnappyProcess from "./svg/IconSnappyProcess";
+import "../scss/app.scss";
 class Hero extends Component {
   state = {};
   render() {
